@@ -1,3 +1,3 @@
 <aura:application extends="force:slds">
-    <c:LightningEventsComp1 />
+    <c:LightningEventsCompContainer />
 </aura:application>

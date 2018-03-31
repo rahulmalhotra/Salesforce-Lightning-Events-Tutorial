@@ -1,0 +1,11 @@
+<aura:component >
+	<aura:attribute name="totalIncome" type="decimal" default="0" ></aura:attribute>
+	<aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleTotalIncomeComponentEvent}" ></aura:handler>
+	Outer Component
+	<div class="innerComponent">
+		Inner Component Section Begin
+		<c:LightningEventsComp1 />
+		Inner Component Section End
+	</div>
+	<span class="totalIncome">Total Income = {!v.totalIncome}</span>
+</aura:component>

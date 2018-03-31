@@ -27,12 +27,25 @@
 		var newIncome = {
 			sno: incomes.length + 1,
 			source: component.find('source').get('v.value'),
-			amount: component.find('amount').get('v.value')
+			amount: parseFloat(component.find('amount').get('v.value'))
 		};
 		if(newIncome.source!='' && newIncome.amount!='' && newIncome.source!=null && newIncome.amount!=null)
 			incomes.push(newIncome);
 		component.set('v.incomes', incomes);
 		component.find('source').set('v.value','');
 		component.find('amount').set('v.value','');
+	},
+
+	fireTotalIncomeComponentEvent: function(component, event, helper) {
+		var incomes = component.get('v.incomes');
+		var totalIncome = 0;
+		for(var i=0;i<incomes.length;i++) {
+			totalIncome += incomes[i].amount;
+		}
+		var totalIncomeComponentEvent = component.getEvent('totalIncomeComponentEvent');
+		totalIncomeComponentEvent.setParams({
+			totalIncome: totalIncome
+		});
+		totalIncomeComponentEvent.fire();
 	}
 })
