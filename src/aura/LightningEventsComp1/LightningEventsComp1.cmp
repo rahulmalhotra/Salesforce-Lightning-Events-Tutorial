@@ -1,0 +1,23 @@
+<aura:component >
+    <aura:attribute name="incomes" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card title="SFDC Stop Income Calculator" iconName="standard:account">
+        <aura:set attribute="actions">
+            <lightning:button label="Show/Hide Income Form" onclick="{!c.toggleIncomeForm}" />
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            <div aura:id="incomeForm" class="hide">
+                <lightning:Input aura:id="source" name="source" required="true" label="Income source"></lightning:Input>
+                <lightning:Input aura:id="amount" name="amount" required="true"  label="Amount"></lightning:Input>
+                <br />
+                <lightning:button name="addIncome" label="Add Income" onclick="{!c.addIncome}"  variant="brand" ></lightning:button>
+            </div>
+            <br />
+            <lightning:datatable data="{! v.incomes }" 
+                columns="{! v.mycolumns }" 
+                keyField="id"
+            />    
+        </p>
+    </lightning:card>
+</aura:component>
