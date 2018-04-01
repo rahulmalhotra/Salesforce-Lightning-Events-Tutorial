@@ -2,7 +2,7 @@
     <aura:attribute name="incomes" type="Object"/>
     <aura:attribute name="mycolumns" type="List"/>
     <aura:registerEvent name="totalIncomeComponentEvent" type="c:LightningComponentEvent"></aura:registerEvent>
-    <aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleTotalIncomeComponentEvent}"></aura:handler>
+    <aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleRegisteredComponentEvent}"></aura:handler>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <lightning:card title="SFDC Stop Income Calculator" iconName="standard:account">
         <aura:set attribute="actions">

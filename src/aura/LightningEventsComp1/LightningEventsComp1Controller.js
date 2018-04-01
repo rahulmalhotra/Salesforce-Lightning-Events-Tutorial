@@ -17,7 +17,7 @@
         }]);
 	},
 	
-	handleTotalIncomeComponentEvent: function(component, event, helper) {
+	handleRegisteredComponentEvent: function(component, event, helper) {
 		alert('Event handler at source component that fired the event.');
 	},
 
