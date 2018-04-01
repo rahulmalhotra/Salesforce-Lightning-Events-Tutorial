@@ -1,11 +1,17 @@
-<aura:component >
+<!-- Wrapper/Parent component called directly from the Lightning Application -->
+<aura:component>
+	<!-- Attribute to store total income coming through the event -->
 	<aura:attribute name="totalIncome" type="decimal" default="0" ></aura:attribute>
+	<!-- Handler defined to handle 'totalIncomeComponentEvent' name same as used in registerEvent tag -->
 	<aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleTotalIncomeComponentEvent}"></aura:handler>
 	Outer Component
+	<!-- Inner component section with border -->
 	<div class="innerComponent">
 		Inner Component Section Begin
+		<!-- Calling the source component -->
 		<c:LightningEventsComp1 />
 		Inner Component Section End
 	</div>
+	<!-- Section to show total income -->
 	<span class="totalIncome">Total Income = {!v.totalIncome}</span>
 </aura:component>

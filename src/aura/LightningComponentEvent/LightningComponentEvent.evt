@@ -1,3 +1,5 @@
+<!-- Defining a component event in Salesforce Lightning -->
 <aura:event type="COMPONENT">
+	<!-- Defining the totalIncome attribute of event with type decimal -->
 	<aura:attribute name="totalIncome" type="Decimal"></aura:attribute>
 </aura:event>

@@ -1,14 +1,24 @@
-<aura:component >
+<!-- Source Lighntning Component -->
+<aura:component>
+    <!-- Attributes for lightning:datatable -->
     <aura:attribute name="incomes" type="Object"/>
     <aura:attribute name="mycolumns" type="List"/>
+    <!-- Registering the Lightning Event -->
     <aura:registerEvent name="totalIncomeComponentEvent" type="c:LightningComponentEvent"></aura:registerEvent>
+    <!-- Defining a handler for lightning event -->
     <aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleRegisteredComponentEvent}"></aura:handler>
+    <!-- Defining init handler for lightning component -->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- Lightning card section begins -->
     <lightning:card title="SFDC Stop Income Calculator" iconName="standard:account">
+        <!-- Lightning card actions -->
         <aura:set attribute="actions">
+            <!-- Action to toggle display of income form -->
             <lightning:button label="Show/Hide Income Form" onclick="{!c.toggleIncomeForm}" />
         </aura:set>
+        <!-- Body of Lightning card -->
         <p class="slds-p-horizontal_small">
+            <!-- Income form to add new income record to the table -->
             <div aura:id="incomeForm" class="hide">
                 <lightning:Input aura:id="source" name="source" required="true" label="Income source"></lightning:Input>
                 <lightning:Input aura:id="amount" name="amount" required="true"  label="Amount"></lightning:Input>
@@ -16,11 +26,13 @@
                 <lightning:button name="addIncome" label="Add Income" onclick="{!c.addIncome}"  variant="brand" ></lightning:button>
             </div>
             <br />
+            <!-- Lightning datatable used to show income records -->
             <lightning:datatable data="{! v.incomes }" 
                 columns="{! v.mycolumns }" 
                 keyField="sno"
             />
             <br />
+            <!-- Button used to fire the event that will pass total income to the application root -->
             <lightning:button name="addIncome" label="Calculate Total Income" onclick="{!c.fireTotalIncomeComponentEvent}"  variant="brand" ></lightning:button>
         </p>
     </lightning:card>

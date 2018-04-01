@@ -1,9 +1,11 @@
 .THIS {
 }
+/* class for the totalIncome text size and padding */
 .THIS.totalIncome {
 	font-size: 1.5em; 
 	padding-left: 1em;	
 }
+/* Class to add border to inner/source component */
 .THIS.innerComponent {
 	border: 1px solid black;
 }

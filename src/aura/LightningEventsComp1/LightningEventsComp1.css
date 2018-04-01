@@ -1,5 +1,6 @@
 .THIS {
 }
+/* Class used to toggle the income form display */
 .THIS .hide {
 	display: none;
 }
