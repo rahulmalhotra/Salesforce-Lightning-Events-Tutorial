@@ -16,6 +16,10 @@
         	amount: 2000
         }]);
 	},
+	
+	handleTotalIncomeComponentEvent: function(component, event, helper) {
+		alert('Event handler at source component that fired the event.');
+	},
 
 	toggleIncomeForm: function(component, event, helper) {
 		var incomeForm = component.find('incomeForm');
