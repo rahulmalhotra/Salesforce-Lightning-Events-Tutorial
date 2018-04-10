@@ -6,7 +6,7 @@
     <!-- Registering the Lightning Event -->
     <aura:registerEvent name="totalIncomeComponentEvent" type="c:LightningComponentEvent"></aura:registerEvent>
     <!-- Defining a handler for lightning event -->
-    <aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleRegisteredComponentEvent}"></aura:handler>
+    <aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleRegisteredComponentEvent}" phase="capture"></aura:handler>
     <!-- Defining init handler for lightning component -->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <!-- Lightning card section begins -->

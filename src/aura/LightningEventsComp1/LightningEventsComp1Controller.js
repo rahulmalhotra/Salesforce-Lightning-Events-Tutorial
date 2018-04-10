@@ -24,6 +24,7 @@
 	// Function to handle Lightning Event fired from this component itself.
 	handleRegisteredComponentEvent: function(component, event, helper) {
 		alert('Event handler at source component that fired the event.');
+		// event.stopPropagation();
 	},
 
 	// Function to toggle Income Form visibility

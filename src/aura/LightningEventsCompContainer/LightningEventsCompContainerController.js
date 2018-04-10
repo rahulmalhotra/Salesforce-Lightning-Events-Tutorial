@@ -6,5 +6,6 @@
 		var totalIncome = event.getParam('totalIncome');
 		// Setting the totalIncome attribute of component with the event's totalIncome attribute value.
 		component.set('v.totalIncome', totalIncome);
+		// event.stopPropagation();
 	}
 })

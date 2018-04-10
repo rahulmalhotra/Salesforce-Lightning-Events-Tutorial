@@ -3,7 +3,7 @@
 	<!-- Attribute to store total income coming through the event -->
 	<aura:attribute name="totalIncome" type="decimal" default="0" ></aura:attribute>
 	<!-- Handler defined to handle 'totalIncomeComponentEvent' name same as used in registerEvent tag -->
-	<aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleTotalIncomeComponentEvent}"></aura:handler>
+	<aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleTotalIncomeComponentEvent}" phase="capture"></aura:handler>
 	Outer Component
 	<!-- Inner component section with border -->
 	<div class="innerComponent">
