@@ -1,0 +1,6 @@
+.THIS {
+}
+/* Border of wrapper component */
+.THIS.wrapperComponent {
+	border: 1px solid red;
+}

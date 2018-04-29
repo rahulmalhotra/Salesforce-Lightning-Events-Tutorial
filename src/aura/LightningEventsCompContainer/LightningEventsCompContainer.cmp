@@ -8,8 +8,11 @@
 	<!-- Inner component section with border -->
 	<div class="innerComponent">
 		Inner Component Section Begin
-		<!-- Calling the source component -->
-		<c:LightningEventsComp1 />
+		<!-- Calling the inner component container -->
+		<c:LightningEventsCompWrapper>
+			<!-- Calling the source component -->
+			<c:LightningEventsComp1 />
+		</c:LightningEventsCompWrapper>
 		Inner Component Section End
 	</div>
 	<!-- Section to show total income -->

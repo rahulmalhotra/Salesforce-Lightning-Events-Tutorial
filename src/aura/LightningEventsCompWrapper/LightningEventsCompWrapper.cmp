@@ -1,0 +1,12 @@
+<!-- Container to wrap inner component -->
+<aura:component>
+	<!-- Event handler in wrapper component -->
+	<aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent"  action="{!c.handleTotalIncomeComponentEvent}" includeFacets="true"></aura:handler>
+	<!-- Wrapper Component -->
+	<div class="wrapperComponent">
+		Wrapper Component Section Begin
+		<!-- Calling the body i.e. the data between the tags of wrapper/container component -->
+		{!v.body}
+		Wrapper Component Section End
+	</div>
+</aura:component>
