@@ -1,0 +1,15 @@
+<!-- Inner component responsible to fire application event -->
+<aura:component>
+	<!-- Id attribute -->
+	<aura:attribute name="id" type="String"></aura:attribute>
+	<!-- Tag to register application event || not mandatory -->
+    <aura:registerEvent name="myAppEvent" type="c:LightningApplicationEvent" />
+    <!-- Handler to handle application event -->
+    <aura:handler event="c:LightningApplicationEvent" action="{!c.handleApplicationEvent}" phase="bubble"/>
+    <div class="innerComponent">
+        Inner Component
+        <br />
+        <!-- Button to fire application event -->
+	    <lightning:button onclick="{!c.fireApplicationEvent}">Fire Event</lightning:button>
+    </div>
+</aura:component>

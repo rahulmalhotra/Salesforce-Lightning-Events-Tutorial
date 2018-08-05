@@ -1,0 +1,6 @@
+.THIS {
+}
+/* Giving a black border to outer component */
+.THIS.outerComponent {
+    border: 1px solid black;
+}

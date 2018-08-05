@@ -1,0 +1,21 @@
+<!-- Application Events Demo Component -->
+<aura:component>
+    <!-- Attribute to store event Id -->
+    <aura:attribute name="id" type="Integer" />
+    <!-- Attribute to store event message -->
+    <aura:attribute name="message" type="String" default="none" />
+    <!-- Handler of application event -->
+    <aura:handler event="c:LightningApplicationEvent" action="{!c.handleApplicationEvent}" phase="bubble" />
+    <div class="outerComponent">
+        Outer Component
+        <br />
+        <!-- Displaying id attribute -->
+        Event container id = {!v.id}
+        <br />
+        <!-- Displaying message attribute -->
+        Message in Event Container = {!v.message}
+        <br />
+        <!-- Calling inner component for application event -->
+        <c:LightningAppComp1 id="{!v.id}" />
+    </div>
+</aura:component>
