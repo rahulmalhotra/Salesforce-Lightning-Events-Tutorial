@@ -5,7 +5,7 @@
 	<!-- Tag to register application event || not mandatory -->
     <aura:registerEvent name="myAppEvent" type="c:LightningApplicationEvent" />
     <!-- Handler to handle application event -->
-    <aura:handler event="c:LightningApplicationEvent" action="{!c.handleApplicationEvent}" phase="bubble"/>
+    <aura:handler event="c:LightningApplicationEvent" action="{!c.handleApplicationEvent}" phase="capture"/>
     <div class="innerComponent">
         Inner Component
         <br />

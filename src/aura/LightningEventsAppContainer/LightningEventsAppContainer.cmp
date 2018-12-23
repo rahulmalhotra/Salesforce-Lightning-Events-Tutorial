@@ -5,7 +5,7 @@
     <!-- Attribute to store event message -->
     <aura:attribute name="message" type="String" default="none" />
     <!-- Handler of application event -->
-    <aura:handler event="c:LightningApplicationEvent" action="{!c.handleApplicationEvent}" phase="bubble" />
+    <aura:handler event="c:LightningApplicationEvent" action="{!c.handleApplicationEvent}" phase="capture" />
     <div class="outerComponent">
         Outer Component
         <br />
